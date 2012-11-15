@@ -9,7 +9,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 
 #Gema para el manejo de la autenticación con twitter
-#gem 'omniauth'
+gem 'omniauth'
 gem 'omniauth-twitter'
 
 
