@@ -1,0 +1,28 @@
+<h1>Lista de clientes</h1>
+
+<table>
+  <tr>
+    <th>Cedula</th>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Correo</th>
+    <th>Direccion</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.cedula %></td>
+    <td><%= user.nombre %></td>
+    <td><%= user.apellido %></td>
+    <td><%= user.correo %></td>
+    <td><%= user.direccion %></td>
+    <td><%= link_to 'Mostrar', user %></td>
+    <td><%= link_to 'Editar', edit_user_path(user) %></td>
+    <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Cliente nuevo', edit_user_path(current_user) %>

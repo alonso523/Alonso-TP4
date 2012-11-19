@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TP4Alonso</title>
+  <title>TP4 Alonso</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag "application" %>
@@ -11,7 +11,7 @@
 
 <div id="user_nav">
   <% if current_user %>
-    Welcome, <%= current_user.nombre %>!
+    Bienvenido, <%= current_user.nombre %>!
     <%= link_to "Cerrar sesión", signout_path %>
   <% else %>
     <%= link_to "Iniciar sesión con twitter", "/auth/twitter"%>

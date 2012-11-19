@@ -1,1 +1,12 @@
-<h1>Bienvenido a la aplicación</h1>
+<html>
+<title>Catálogo de productos</title>
+<head>
+<h1>Página administradora</h1>
+</head>
+
+<div>
+<%= link_to 'Ver clientes', user_path%>
+</div>
+
+</html>
+

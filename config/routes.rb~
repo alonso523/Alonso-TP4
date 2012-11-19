@@ -1,12 +1,19 @@
 TP4Alonso::Application.routes.draw do 
 
+  get "user/index"
+
+  get "user/new"
+
   resources :pedidos
 
   resources :productos
 
   resources :tipo_productos
 
+  resources :users
+
   resources :inicio
+
   get "inicio/index"
   get "inicio/menu"
 
