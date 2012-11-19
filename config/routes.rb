@@ -1,12 +1,20 @@
 TP4Alonso::Application.routes.draw do 
 
-  resources :prueba
-  get "prueba/index"
+  resources :pedidos
+
+  resources :productos
+
+  resources :tipo_productos
+
+  resources :inicio
+  get "inicio/index"
+  get "inicio/menu"
 
   match '/auth/:provider/callback' => 'sessions#create'
   match "/signout" => "sessions#destroy", :as => :signout
+  match "/menu" => "inicio#menu", :as => :menu
   
-  root :to => 'prueba#index'
+  root :to => 'inicio#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,4 @@
-class PruebaController < ApplicationController
+class InicioController < ApplicationController
 
    def index
     respond_to do |format|

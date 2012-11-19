@@ -11,9 +11,10 @@
 
 <div id="user_nav">
   <% if current_user %>
-    <%= link_to "Sign Out", signout_path %>
+    Welcome, <%= current_user.nombre %>!
+    <%= link_to "Cerrar sesión", signout_path %>
   <% else %>
-    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+    <%= link_to "Iniciar sesión con twitter", "/auth/twitter"%>
   <% end %>
 </div>
 
