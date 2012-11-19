@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @clientepedido.cliente_id %>
+</p>
+
+<p>
+  <b>Producto:</b>
+  <%= @clientepedido.producto_id %>
+</p>
+
+<p>
+  <b>Cantidad:</b>
+  <%= @clientepedido.cantidad %>
+</p>
+
+
+<%= link_to 'Edit', edit_clientepedido_path(@clientepedido) %> |
+<%= link_to 'Back', clientepedidos_path %>

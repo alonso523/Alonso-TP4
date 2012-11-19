@@ -1,5 +1,9 @@
 TP4Alonso::Application.routes.draw do 
 
+  resources :clientepedidos
+
+  resources :clientes
+
   get "user/index"
 
   get "user/new"

@@ -1,0 +1,27 @@
+<h1>Listing clientepedidos</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientepedidos.each do |clientepedido| %>
+  <tr>
+    <td><%= clientepedido.cliente_id %></td>
+    <td><%= clientepedido.producto_id %></td>
+    <td><%= clientepedido.cantidad %></td>
+    <td><%= link_to 'Show', clientepedido %></td>
+    <td><%= link_to 'Edit', edit_clientepedido_path(clientepedido) %></td>
+    <td><%= link_to 'Destroy', clientepedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Clientepedido', new_clientepedido_path %>

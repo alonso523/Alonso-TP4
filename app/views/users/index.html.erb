@@ -1,4 +1,4 @@
-<h1>Lista de clientes</h1>
+<h1>Mi cuenta</h1>
 
 <table>
   <tr>
@@ -25,4 +25,8 @@
 
 <br />
 
-<%= link_to 'Cliente nuevo', edit_user_path(current_user) %>
+<%= link_to 'Actualizar mi información', edit_user_path(current_user) %>
+<div>
+<%= link_to 'Ver clientes', clientes_path%>
+<%= link_to 'Gestionar catálogo', productos_path%>
+</div>

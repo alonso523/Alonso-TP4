@@ -1,4 +1,4 @@
-<h1>Editando tipo de productos</h1>
+<h1>Editing tipo_producto</h1>
 
 <%= render 'form' %>
 

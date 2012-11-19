@@ -1,4 +1,4 @@
-<h1>Listing productos</h1>
+<h1>Lista de productos</h1>
 
 <table>
   <tr>
@@ -23,13 +23,14 @@
     <td><%= producto.image %></td>
     <td><%= producto.descripcion %></td>
     <td><%= producto.cantidad %></td>
-    <td><%= link_to 'Show', producto %></td>
-    <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-    <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Motrar', producto %></td>
+    <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
+    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Producto', new_producto_path %>
+<%= link_to 'Nuevo producto', new_producto_path %>
+<%= link_to 'Nuevo tipo de producto', tipo_productos_path %>
