@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :tipoProducto_id, 'Tipo de producto' %><br />
-    <%= f.number_field :tipoProducto_id %>
+    <%= select :producto, :tipoProducto_id, TipoProducto.find(:all).collect {|c| [c.nombre]}, {:include_blank => false} %><br />
   </div>
   <div class="field">
     <%= f.label :nombre %><br />

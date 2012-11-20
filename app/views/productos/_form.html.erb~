@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :tipoProducto_id, 'Tipo de producto' %><br />
-    <%= f.number_field :tipoProducto_id %>
+    <%= f.select :producto, :tipoProducto_id, TipoProducto.find(:all).collect {|c| [c.nombre]}, {:include_blank => false} %><br />
   </div>
   <div class="field">
     <%= f.label :nombre %><br />
@@ -38,7 +37,7 @@
     <%= f.label :image, 'Imagen' %><br />
     <%= f.file_field :image %><br />
   </div>
-    <%= f.label :remote_image_url, 'Imagen desde url' %><br />
+    <%= f.label :remote_image_url, 'o imagen desde url' %><br />
     <%= f.text_field :remote_image_url %><br />
   </div> 
  </div>
