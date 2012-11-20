@@ -15,9 +15,9 @@
     <td><%= clientepedido.cliente_id %></td>
     <td><%= clientepedido.producto_id %></td>
     <td><%= clientepedido.cantidad %></td>
-    <td><%= link_to 'Show', clientepedido %></td>
-    <td><%= link_to 'Edit', edit_clientepedido_path(clientepedido) %></td>
-    <td><%= link_to 'Destroy', clientepedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', clientepedido %></td>
+    <td><%= link_to 'Editar', edit_clientepedido_path(clientepedido) %></td>
+    <td><%= link_to 'Eliminar', clientepedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

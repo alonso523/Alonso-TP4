@@ -12,10 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= select :cliente, :cliente_id, Cliente.find(:all).collect {|c| [c.nombre]}, {:include_blank => false} %><br />
+    <%= f.label :cliente_id, 'Cliente' %><br />
+    <%= f.collection_select :cliente_id, Cliente.all, :id, :nombre %><br />
   </div>
-    <div class="field">
-    <%= select :producto, :producto_id, Producto.find(:all).collect {|c| [c.nombre]}, {:include_blank => false} %><br />
+  <div class="field">
+    <%= f.label :producto_id, 'Producto' %><br />
+    <%= f.collection_select :producto_id, Producto.all, :id, :nombre %><br />
   </div>
   <div class="field">
     <%= f.label :cantidad %><br />
