@@ -18,7 +18,7 @@
     <td><%= producto.nombre %></td>
     <td><%= producto.marca %></td>
     <td><%= producto.precio %></td>
-    <td><%= image_tag producto.image_url.to_s %></td>
+    <td><%= image_tag producto.image_url(:thumb).to_s %></td>
     <td><%= producto.descripcion %></td>
     <td><%= producto.cantidad %></td>
     <td><%= link_to 'Motrar', producto %></td>
