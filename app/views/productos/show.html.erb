@@ -17,12 +17,12 @@
 
 <p>
   <b>Precio:</b>
-  <%= @producto.precio %>
+  ¢<%= @producto.precio %>
 </p>
 
 <p>
-  <b>Image:</b>
-  <%= @producto.image %>
+  <b>Imagen:</b>
+  <%= image_tag @producto.image_url(:thumb).to_s %>
 </p>
 
 <p>

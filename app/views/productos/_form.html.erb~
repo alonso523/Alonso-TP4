@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.select :producto, :tipoProducto_id, TipoProducto.find(:all).collect {|c| [c.nombre]}, {:include_blank => false} %><br />
+    <%= f.collection_select :tipoProducto_id, TipoProducto.all, :id, :nombre %><br />
   </div>
   <div class="field">
     <%= f.label :nombre %><br />

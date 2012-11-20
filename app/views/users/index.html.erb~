@@ -28,5 +28,6 @@
 <%= link_to 'Actualizar mi información', edit_user_path(current_user) %>
 <div>
 <%= link_to 'Ver clientes', clientes_path%>
-<%= link_to 'Gestionar catálogo', clientes_path%>
+<%= link_to 'Gestionar catálogo', productos_path%>
+<%= link_to 'Realizar pedido', clientepedido_path%>
 </div>

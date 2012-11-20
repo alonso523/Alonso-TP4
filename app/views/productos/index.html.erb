@@ -17,7 +17,7 @@
   <tr>
     <td><%= producto.nombre %></td>
     <td><%= producto.marca %></td>
-    <td><%= producto.precio %></td>
+    <td>¢<%= producto.precio %></td>
     <td><%= image_tag producto.image_url(:thumb).to_s %></td>
     <td><%= producto.descripcion %></td>
     <td><%= producto.cantidad %></td>
@@ -32,3 +32,4 @@
 
 <%= link_to 'Nuevo producto', new_producto_path %>
 <%= link_to 'Nuevo tipo de producto', tipo_productos_path %>
+<%= link_to 'volver a mi cuenta', users_path %>

@@ -2,7 +2,7 @@
 
 <p>
   <b>Tipo producto:</b>
-  <%= @producto.tipoProducto_id.nombre %>
+  <%= @producto.tipoProducto_id %>
 </p>
 
 <p>
@@ -17,12 +17,12 @@
 
 <p>
   <b>Precio:</b>
-  <%= @producto.precio %>
+  ¢<%= @producto.precio %>
 </p>
 
 <p>
   <b>Image:</b>
-  <%= @producto.image %>
+  <%= image_tag @producto.image_url(:thumb).to_s %>
 </p>
 
 <p>
