@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Tipo Producto</th>
     <th>Nombre</th>
     <th>Marca</th>
     <th>Precio</th>
@@ -16,11 +15,10 @@
 
 <% @productos.each do |producto| %>
   <tr>
-    <td><%= producto.tipoProducto_nombre %></td>
     <td><%= producto.nombre %></td>
     <td><%= producto.marca %></td>
     <td><%= producto.precio %></td>
-    <td><%= producto.image %></td>
+    <td><%= image_tag producto.image_url.to_s%></td>
     <td><%= producto.descripcion %></td>
     <td><%= producto.cantidad %></td>
     <td><%= link_to 'Motrar', producto %></td>
