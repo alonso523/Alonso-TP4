@@ -1,0 +1,31 @@
+<h1>Listado de pedidos</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Apellido</th>
+    <th>Producto</th>
+    <th>Cantidad</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clientepedidos.each do |clientepedido| %>
+  <tr>
+    <td><%= Cliente.find(clientepedido.cliente_id).nombre %></td>
+    <td><%= Cliente.find(clientepedido.cliente_id).apellido %></td>
+    <td><%= Producto.find(clientepedido.producto_id).nombre %></td>
+    <td><%= Producto.find(clientepedido.producto_id) %></td>
+    <td><%= clientepedido.cantidad %></td>
+    <td><%= link_to 'Mostrar', clientepedido %></td>
+    <td><%= link_to 'Editar', edit_clientepedido_path(clientepedido) %></td>
+    <td><%= link_to 'Eliminar', clientepedido, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo pedido', new_clientepedido_path %>
+<%= link_to 'Mi cuenta', users_path%>
