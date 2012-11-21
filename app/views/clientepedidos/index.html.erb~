@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Cliente</th>
+    <th>Apellido</th>
     <th>Producto</th>
     <th>Cantidad</th>
     <th></th>
@@ -13,8 +14,12 @@
 <% @clientepedidos.each do |clientepedido| %>
   <tr>
     <td><%= Cliente.find(clientepedido.cliente_id).nombre %></td>
+<<<<<<< HEAD
     <td><%= Cliente.find(clientepedido.cliente_id).apellido %></td>
     <td><%= Producto.find(clientepedido.producto_id).nombre %></td>
+=======
+    <td><%= Producto.find(clientepedido.producto_id) %></td>
+>>>>>>> 45b0bcd2709111d7d770d7d4cce5bffae3e387e9
     <td><%= clientepedido.cantidad %></td>
     <td><%= link_to 'Mostrar', clientepedido %></td>
     <td><%= link_to 'Editar', edit_clientepedido_path(clientepedido) %></td>
