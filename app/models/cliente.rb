@@ -13,6 +13,10 @@ validates :correo,
 
 validates :telefono,
 	  :presence => true,
-	  :format => {:with => /^[0-9]{4}-[0-9]{4}$/ }
+	  :format => {:with => /^[0-9]{8}$/ }
+
+validates :direccion,
+          :presence => true,
+          :format => {:with => /^(\d|-)?(\d|,)*\.?\d*$/ }
 
 end

@@ -25,4 +25,4 @@
 <br />
 
 <%= link_to 'Nuevo pedido', new_clientepedido_path %>
-<%= link_to 'Mi cuenta', user_path%>
+<%= link_to 'Mi cuenta', users_path%>

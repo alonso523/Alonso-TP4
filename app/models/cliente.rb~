@@ -11,4 +11,12 @@ validates :correo,
           :uniqueness => true,   
           :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
 
+validates :telefono,
+	  :presence => true,
+	  :format => {:with => /^[0-9]{4}-[0-9]{4}$/ }
+
+validates :direccion,
+          :presence => true,
+          :format => {:with => /^(\d|-)?(\d|,)*\.?\d*$/ }
+
 end
