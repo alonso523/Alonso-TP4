@@ -2,12 +2,12 @@
 
 <p>
   <b>Cliente:</b>
-  <%= @clientepedido.cliente_id %>
+  <%= Cliente.find(@clientepedido.cliente_id).nombre %>
 </p>
 
 <p>
   <b>Producto:</b>
-  <%= @clientepedido.producto_id %>
+  <%= Producto.find(@clientepedido.producto_id).nombre %>
 </p>
 
 <p>
@@ -16,5 +16,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_clientepedido_path(@clientepedido) %> |
-<%= link_to 'Back', clientepedidos_path %>
+<%= link_to 'Editar', edit_clientepedido_path(@clientepedido) %> |
+<%= link_to 'Atrás', clientepedidos_path %>

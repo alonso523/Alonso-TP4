@@ -16,6 +16,7 @@
 
 <% @productos.each do |producto| %>
  <tr>
+    <td><%= TipoProducto.find(@producto.tipoProducto_id).nombre %><td>
     <td><%= producto.nombre %></td>
     <td><%= producto.marca %></td>
     <td>¢<%= producto.precio %></td>
@@ -24,7 +25,7 @@
     <td><%= producto.cantidad %></td>
     <td><%= link_to 'Motrar', producto %></td>
     <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
-    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Está seguro?' } %></td>
   </tr>
 <% end %>
 </table>

@@ -2,12 +2,13 @@
 
 <p>
   <b>Cliente:</b>
-  <%= @clientepedido.cliente_id %>
+  <%= Cliente.find(@clientepedido.cliente_id).nombre %>
+  <%= Cliente.find(@clientepedido.cliente_id).apellido %>
 </p>
 
 <p>
   <b>Producto:</b>
-  <%= @clientepedido.producto_id %>
+  <%= Producto.find(@clientepedido.producto_id).nombre %>
 </p>
 
 <p>

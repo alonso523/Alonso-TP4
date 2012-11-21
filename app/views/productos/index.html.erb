@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>Tipo producto</th>
     <th>Nombre</th>
     <th>Marca</th>
     <th>Precio</th>
@@ -24,7 +23,7 @@
     <td><%= producto.cantidad %></td>
     <td><%= link_to 'Motrar', producto %></td>
     <td><%= link_to 'Editar', edit_producto_path(producto) %></td>
-    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Está seguro?' } %></td>
   </tr>
 <% end %>
 </table>
