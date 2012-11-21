@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :cliente_id, 'Cliente' %><br />
-    <%= f.collection_select :cliente_id, Cliente.all, :id, :nombre %><br />
+    <%= f.label :cliente_id, 'Cliente:' %><br />
+    <%= f.collection_select :cliente_id, Cliente.all, :id, :nombre%><br />
   </div>
   <div class="field">
-    <%= f.label :producto_id, 'Producto' %><br />
+    <%= f.label :producto_id, 'Producto:' %><br />
     <%= f.collection_select :producto_id, Producto.all, :id, :nombre %><br />
   </div>
   <div class="field">

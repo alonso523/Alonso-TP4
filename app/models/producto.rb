@@ -13,4 +13,8 @@ has_many :cliente, :through => :clienteproducto
 
   mount_uploader :image, ImageUploader        #Permite la gestión de imágenes 
 
+#Validaciones de los distintos atributos 
+validates_presence_of :cantidad, :descripcion, :marca, :nombre, :precio, :tipoProducto_id
+
+
 end

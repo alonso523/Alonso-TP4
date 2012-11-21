@@ -2,7 +2,7 @@
 
 <p>
   <b>Tipo producto:</b>
-  <%= @producto.tipoProducto_id %>
+  <%= @producto.tipoProducto_id%>
 </p>
 
 <p>

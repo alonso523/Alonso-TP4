@@ -1,4 +1,4 @@
-<h1>Listing clientepedidos</h1>
+<h1>Listado de pedidos</h1>
 
 <table>
   <tr>
@@ -25,3 +25,4 @@
 <br />
 
 <%= link_to 'Nuevo pedido', new_clientepedido_path %>
+<%= link_to 'Mi cuenta', user_path%>
