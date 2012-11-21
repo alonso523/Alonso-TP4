@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <b>Tipo producto:</b>
-  <%= @producto.tipoProducto_id%>
+  <%= tipoProducto.find(clientepedido.tipoProducto_id).nombre %>
 </p>
 
 <p>

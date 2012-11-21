@@ -2,6 +2,7 @@
 class Producto < ActiveRecord::Base
   attr_accessible :cantidad, :descripcion, :image, :marca, :nombre, :precio, :tipoProducto_id, :remote_image_url
 
+#Relaciones para el manejo de la base de datos
 belongs_to :tipo_producto
 
 has_many :pedido

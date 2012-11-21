@@ -11,7 +11,7 @@ validates :correo,
           :uniqueness => true,   
           :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
 
-
+#método que permite hacer la autenticación con twitter
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth["provider"]
