@@ -29,5 +29,5 @@
 <div>
 <%= link_to 'Ver clientes', clientes_path%>
 <%= link_to 'Gestionar catálogo', productos_path%>
-<%= link_to 'Realizar pedido', clientepedido_path%>
+<%= link_to 'Realizar pedido', clientepedidos_path%>
 </div>

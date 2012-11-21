@@ -2,11 +2,10 @@
 
 <table>
   <tr>
-    <th>Tipo producto</th>
     <th>Nombre</th>
     <th>Marca</th>
     <th>Precio</th>
-    <th>Image</th>
+    <th>Imagen</th>
     <th>Descripcion</th>
     <th>Cantidad</th>
     <th></th>
@@ -16,7 +15,6 @@
 
 <% @productos.each do |producto| %>
  <tr>
-    <td><%= TipoProducto.find(@producto.tipoProducto_id).nombre %><td>
     <td><%= producto.nombre %></td>
     <td><%= producto.marca %></td>
     <td>¢<%= producto.precio %></td>
