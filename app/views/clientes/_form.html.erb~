@@ -1,4 +1,4 @@
-<%= form_for(@cliente) do |f| %>
+<%= form_for (@cliente) {:validate => true} do |f| %>
   <% if @cliente.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
@@ -22,6 +22,10 @@
   <div class="field">
     <%= f.label :apellido, 'Apellido' %><br />
     <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono, 'Teléfono' %><br />
+    <%= f.text_field :telefono %>
   </div>
   <div class="field">
     <%= f.label :correo, 'Email' %><br />

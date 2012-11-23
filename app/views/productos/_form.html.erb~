@@ -1,4 +1,4 @@
-<%= form_for @producto, :html => {:multipart => true} do |f| %>
+<%= form_for @producto, :validate => true, :html => {:multipart => true} do |f| %>
   <% if @producto.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
@@ -12,6 +12,7 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :tipoProducto_id, 'Tipo de producto' %><br />
     <%= f.collection_select :tipoProducto_id, TipoProducto.all, :id, :nombre %><br />
   </div>
   <div class="field">

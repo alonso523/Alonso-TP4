@@ -5,11 +5,11 @@ has_many :pedido
 has_many :producto, :through => :pedido
 
 #Validaciones de los distintos atributos 
-validates_presence_of :apellido, :cedula, :correo, :direccion, :nombre  
-validates :correo,   
-          :presence => true,   
-          :uniqueness => true,   
-          :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
+#validates_presence_of :apellido, :cedula, :correo, :direccion, :nombre  
+#validates :correo,   
+#          :presence => true,   
+#          :uniqueness => true,   
+#          :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }
 
 #método que permite hacer la autenticación con twitter
   def self.create_with_omniauth(auth)

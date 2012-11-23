@@ -17,5 +17,11 @@ has_many :cliente, :through => :clienteproducto
 #Validaciones de los distintos atributos 
 validates_presence_of :cantidad, :descripcion, :marca, :nombre, :precio, :tipoProducto_id
 
+validates :precio,
+	  :presence => true,
+	  :format => {:with => /^[0-9]{8}$/ }
 
+validates :cantidad,
+          :presence => true,
+          :format => {:with => /^[0-9]{9}$/ }
 end

@@ -33,6 +33,9 @@ gem 'carrierwave'
 #gema que permite escalar las imágenes, dentro de otras funcionalidades más
 gem 'rmagick'
 
+#gema que permite ralizar validaciones desde el lado del cliente
+gem 'client_side_validations'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

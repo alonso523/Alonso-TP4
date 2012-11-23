@@ -2,6 +2,7 @@
 class Producto < ActiveRecord::Base
   attr_accessible :cantidad, :descripcion, :image, :marca, :nombre, :precio, :tipoProducto_id, :remote_image_url
 
+#Relaciones para el manejo de la base de datos
 belongs_to :tipo_producto
 
 has_many :pedido
@@ -16,5 +17,11 @@ has_many :cliente, :through => :clienteproducto
 #Validaciones de los distintos atributos 
 validates_presence_of :cantidad, :descripcion, :marca, :nombre, :precio, :tipoProducto_id
 
+validates :precio,
+	  :presence => true,
+	  :format => {:with => /^[0-9]{8}$/ }
 
+validates :cantidad,
+          :presence => true,
+          :format => {:with => /^[0-9]{9}$/ }
 end

@@ -44,7 +44,7 @@ class ClientepedidosController < ApplicationController
 
     respond_to do |format|
       if @clientepedido.save
-        format.html { redirect_to @clientepedido, notice: 'EL pedido fue registrado con exito.' }
+        format.html { redirect_to @clientepedido, notice: 'Clientepedido was successfully created.' }
         format.json { render json: @clientepedido, status: :created, location: @clientepedido }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class ClientepedidosController < ApplicationController
 
     respond_to do |format|
       if @clientepedido.update_attributes(params[:clientepedido])
-        format.html { redirect_to @clientepedido, notice: 'EL pedido fue actualizado.' }
+        format.html { redirect_to @clientepedido, notice: 'Clientepedido was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

@@ -8,4 +8,10 @@ belongs_to :producto
 #Validaciones de los distintos atributos 
 validates_presence_of :cantidad, :cliente_id, :producto_id
 
+#Validaciones, tanto del lado del cliente como del lado del servidor
+validates :cantidad,
+	  :presence => true,
+	  :uniqueness => true,
+  	  :format => {:with => /^[1-9]{3}$/ }
+
 end
