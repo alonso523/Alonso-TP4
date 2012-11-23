@@ -41,8 +41,11 @@ class ClientepedidosController < ApplicationController
   # POST /clientepedidos.json
   def create
     @clientepedido = Clientepedido.new(params[:clientepedido])       #Obtiene los datos del clientepedido
-    @cantidadCliente = @clientepedido.cantidad
-    @cantidadProducto = Producto.find(@clientepedido.producto_id).cantidad
+    @cantidadCliente = @clientepedido.cantidad		    #cantidad de producto solicitado por el cliente
+    @cantidadProducto = Producto.find(@clientepedido.producto_id).cantidad   #cantidad de ese producto
+    @cantidadActual = @cantidadProducto - @cantidadCliente	#Cantidad actualizada
+    @idProducto = Producto.find(@clientepedido.producto_id).id  #Permite obtener el id del producto
+#      raise @idProducto.to_yaml
 
    if @cantidadCliente > @cantidadProducto
     	flash[:notice] = "No hay suficiente cantidades en el inventario"
@@ -52,6 +55,7 @@ class ClientepedidosController < ApplicationController
       if @clientepedido.save
 	format.html { redirect_to @clientepedido, notice: 'EL pedido fue registrado con exito.' }
 	format.json { render json: @clientepedido, status: :created, location: @clientepedido }
+Producto.find(@idProducto).update_attribute(:cantidad, @cantidadActual) #Actualiza la cantidad de ese producto del inventario
       else
 	format.html { render action: "new" }
 	format.json { render json: @clientepedido.errors, status: :unprocessable_entity }
