@@ -40,18 +40,25 @@ class ClientepedidosController < ApplicationController
   # POST /clientepedidos
   # POST /clientepedidos.json
   def create
-    @clientepedido = Clientepedido.new(params[:clientepedido])
+    @clientepedido = Clientepedido.new(params[:clientepedido])       #Obtiene los datos del clientepedido
+    @cantidadCliente = @clientepedido.cantidad
+    @cantidadProducto = Producto.find(@clientepedido.producto_id).cantidad
 
+   if @cantidadCliente > @cantidadProducto
+    	flash[:notice] = "No hay suficiente cantidades en el inventario"
+        render :new
+   else
     respond_to do |format|
       if @clientepedido.save
-        format.html { redirect_to @clientepedido, notice: 'EL pedido fue registrado con exito.' }
-        format.json { render json: @clientepedido, status: :created, location: @clientepedido }
+	format.html { redirect_to @clientepedido, notice: 'EL pedido fue registrado con exito.' }
+	format.json { render json: @clientepedido, status: :created, location: @clientepedido }
       else
-        format.html { render action: "new" }
-        format.json { render json: @clientepedido.errors, status: :unprocessable_entity }
+	format.html { render action: "new" }
+	format.json { render json: @clientepedido.errors, status: :unprocessable_entity }
       end
+     end
     end
-  end
+   end
 
   # PUT /clientepedidos/1
   # PUT /clientepedidos/1.json

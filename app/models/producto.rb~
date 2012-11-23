@@ -24,4 +24,10 @@ validates :precio,
 validates :cantidad,
           :presence => true,
           :format => {:with => /^[0-9]{9}$/ }
+
+#Método que permite validar la cantidad en inventario
+def validarInventario
+  if cantidad.present? 
+    
+
 end

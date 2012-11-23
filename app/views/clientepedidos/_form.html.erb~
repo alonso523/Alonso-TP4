@@ -1,4 +1,4 @@
-<%= form_for(@clientepedido) do |f| %>
+<%= form_for @clientepedido, :validate => true do |f| %>
   <% if @clientepedido.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@clientepedido.errors.count, "error") %> prohibited this clientepedido from being saved:</h2>

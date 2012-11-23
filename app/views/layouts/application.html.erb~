@@ -8,16 +8,16 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
 <div id="user_nav">
   <% if current_user %>
-    Welcome, <%= current_user.nombre %>!
+    Bienvenido, <%= current_user.nombre %>!
     <%= link_to "Cerrar sesión", signout_path %>
   <% else %>
     <%= link_to "Iniciar sesión con twitter", "/auth/twitter"%>
   <% end %>
 </div>
-
+<% flash.each do |name, msg|%>
+<% end %>
 <%= yield %>
 
 </body>

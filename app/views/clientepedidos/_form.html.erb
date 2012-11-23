@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<p id="notice"><%= notice%></p>
+
   <div class="field">
     <%= f.label :cliente_id, 'Cliente:' %><br />
     <%= f.collection_select :cliente_id, Cliente.all, :id, :nombre%><br />
