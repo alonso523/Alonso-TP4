@@ -13,8 +13,8 @@
     Bienvenido, <%= current_user.nombre %>!
     <%= link_to "Cerrar sesión", signout_path %>
   <% else %>
-    <%= link_to "Iniciar sesión con twitter", "/auth/twitter"%>
-    <IMG SCR="images/twitter.jpg">
+    <p>Iniciar sesión --->
+    <%= link_to image_tag("twitter.jpg", :size => "50x50"), "/auth/twitter"%></p>
   <% end %>
 </div>
 

@@ -3,51 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 h1 {
 	padding-left:5%;
- 	color:#20088B;
+ 	color: white;
 }
 
 body {
-  background-color: #4FD6EE;
+  background-color: #C5DEF5;
   color: white;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 16px;
   line-height: 18px;
 }
-div {
-	&#login {
-		width: 35%;
-		margin: 0 auto;
-		padding-top:20px;
-		border: {
-			style: inset;
-			radius:10px;
-			width:2px;
-		}
-		h1 {
-			text-align: right;
-		}
-		.col1 {
-			float:left;
-			width:20%;
-			display:table-column;
-			padding:10px;
-		}
-		.col2 {
-			float:right;
-			display:table-column;
-			padding:10px;
-		}
-		#row1 {
-			display:table-row;
-		}
-		#row2 {
-			display:table-row;
-		}
-		#button {
+//titulo del inicio de pagina
+div#titulo{
+			background-color:#4682B4;
+			color:white;
+			font: {
+				weight:bold;
+			}
 			padding: {
-				left:40%;
-				bottom:10px;
+				top:3px;
+				bottom:3px;
+				left:5px;
+				right:5px;
 			}
 		}
-	}
+
+//Estructura del cuerpo de la pagina de inicio, aqui van las imagenes
+div#imagenes{
+			color:white;
+			font: {
+				weight:bold;
+			}
+			padding: {
+				top:50px;
+				bottom:50px;
+				left:15px;
+				right:15px;
+			}
 }
