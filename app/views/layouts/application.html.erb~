@@ -14,8 +14,10 @@
     <%= link_to "Cerrar sesión", signout_path %>
   <% else %>
     <%= link_to "Iniciar sesión con twitter", "/auth/twitter"%>
+    <IMG SCR="twitter.jpg">
   <% end %>
 </div>
+
 <% flash.each do |name, msg|%>
 <% end %>
 <%= yield %>
